@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  
+}
+
+body {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow-x: hidden;
+  /* padding-bottom: 10.75rem; */
+
+}
+
+/* Slider */
+.swiper-pagination-bullet {
+  width: 20px !important;
+  height: 10px !important;
+  border-radius: 15px !important;
+}
+
+.swiper-slide {
+  display: flex !important;
+  cursor: pointer;
+}
+
+.main-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height:calc(100vh - 287.59px);
+}
+
