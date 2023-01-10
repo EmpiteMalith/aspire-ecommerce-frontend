@@ -6,7 +6,12 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import Badge from "@mui/material/Badge";
 
 const Container = styled.div`
-  height: 60px;
+  height: 65px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: #ffffff;
 `;
 const Wrapper = styled.div`
   padding: 15px 30px;
@@ -18,7 +23,7 @@ const Logo = styled.div`
   font-size: 1.75rem;
   font-weight: 600;
   color: #007aff;
-  letter-spacing:0.45rem;
+  letter-spacing: 0.45rem;
 `;
 const Left = styled.div`
   flex: 1;
@@ -34,7 +39,7 @@ const MenuItem = styled.div`
   margin-left: 25px;
 `;
 
-const Navbar = ({showCart}) => {
+const Navbar = ({ showCart }) => {
   return (
     <Container>
       <Wrapper>
