@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -12,6 +12,8 @@ const Container = styled.div`
   z-index: 100;
   width: 100%;
   background: #ffffff;
+  box-shadow: ${(props) =>
+    props.stickyNav ? "0 3px 5px rgba(57, 63, 72, 0.3)" : "none"};
 `;
 const Wrapper = styled.div`
   padding: 15px 30px;
@@ -40,8 +42,16 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = ({ showCart }) => {
+  const [navbar, setNavbar] = useState(false);
+
+  const stickyNavbar = () => {
+    window.scrollY >= 100 ? setNavbar(true) : setNavbar(false);
+  };
+
+  window.addEventListener("scroll", stickyNavbar);
+
   return (
-    <Container>
+    <Container stickyNav={navbar}>
       <Wrapper>
         <Left>
           <Logo>ASPIRE</Logo>
