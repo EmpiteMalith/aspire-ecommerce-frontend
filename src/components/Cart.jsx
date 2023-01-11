@@ -13,12 +13,13 @@ const Container = styled.div`
   transform: translateX(${(props) => props.transform}%);
   transition: all 0.4s;
   z-index: 100;
+  box-shadow: 10px 0px 15px -5px rgba(0, 0, 0, 0.15),
+    -10px 0px 15px -5px rgba(0, 0, 0, 0.15);
 `;
 
 const CartHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  
 `;
 const Title = styled.h2`
   font-size: 1.5rem;
