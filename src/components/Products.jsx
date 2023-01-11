@@ -8,7 +8,7 @@ const Container = styled.div`
   grid-template-columns: repeat(auto-fit, 18rem);
   grid-gap:15px;
   justify-content:center;
-  padding:1rem 5rem;
+  padding:1rem 4rem;
 `;
 
 const Products = () => {

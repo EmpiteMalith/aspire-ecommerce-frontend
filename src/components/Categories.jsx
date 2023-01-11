@@ -6,7 +6,7 @@ import SingleCategory from "./SingleCategory";
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 1.2rem 6rem;
+  padding: 1.2rem 7rem;
 `;
 
 const Title = styled.h2`
