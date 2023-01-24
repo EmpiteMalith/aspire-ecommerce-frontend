@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Products from "../components/Products";
+import Products from "../components/productlist/Products";
 
 const Container = styled.div`
 `;

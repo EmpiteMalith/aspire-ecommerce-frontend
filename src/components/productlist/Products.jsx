@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { ProductsData } from "../data/productsData";
-import Product from "./Product";
+import { ProductsData } from "../../data/productsData";
+import Product from "../product/Product";
 
 const Container = styled.div`
   display: grid;

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { sliderContent } from "../data/sliderData";
+import { sliderContent } from "../../data/sliderData";
 import {
   Container,
   ImgContainer,
