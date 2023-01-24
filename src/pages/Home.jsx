@@ -1,8 +1,8 @@
 import React from "react";
-import Categories from "../components/Categories";
-import Products from "../components/Products";
-import Services from "../components/Services";
-import Slider from "../components/Slider";
+import Categories from "../components/categories/Categories";
+import Products from "../components/productlist/Products";
+import Services from "../components/services/Services";
+import Slider from "../components/slider/Slider";
 
 import styled from "styled-components";
 

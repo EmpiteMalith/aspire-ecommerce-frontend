@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Delivery from "../assets/images/icons8-delivery-box-60.png";
-import Phone from "../assets/images/icons8-phone-64.png";
-import DeliveryReturn from "../assets/images/icons8-return-purchase-80.png";
-import Money from "../assets/images/icons8-banknotes-80.png";
+import Delivery from "../../assets/images/icons8-delivery-box-60.png";
+import Phone from "../../assets/images/icons8-phone-64.png";
+import DeliveryReturn from "../../assets/images/icons8-return-purchase-80.png";
+import Money from "../../assets/images/icons8-banknotes-80.png";
 
 const Container = styled.div`
   display: flex;

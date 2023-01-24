@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { categories } from "../data/categoryData";
-import SingleCategory from "./SingleCategory";
+import { categories } from "../../data/categoryData";
+import SingleCategory from "../singlecategory/SingleCategory";
 
 const Container = styled.div`
   display: grid;
