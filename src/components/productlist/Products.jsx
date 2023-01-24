@@ -1,15 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { ProductsData } from "../../data/productsData";
 import Product from "../product/Product";
-
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 18rem);
-  grid-gap:15px;
-  justify-content:center;
-  padding:1rem 4rem;
-`;
+import { Container } from "../productlist/ProductListStyles";
 
 const Products = () => {
   return (
