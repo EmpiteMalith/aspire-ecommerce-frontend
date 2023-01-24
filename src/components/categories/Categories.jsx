@@ -1,20 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { categories } from "../../data/categoryData";
 import SingleCategory from "../singlecategory/SingleCategory";
-
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 1.2rem 7rem;
-`;
-
-const Title = styled.h2`
-  font-size: 2rem;
-  text-align: center;
-  margin: 4rem 0;
-  font-weight: 500;
-`;
+import { Container, Title } from "../categories/CategoriesStyles";
 
 const Categories = () => {
   return (
