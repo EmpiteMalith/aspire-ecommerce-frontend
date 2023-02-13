@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-export const Product = styled.div``;
+export const CartBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2.5rem;
+`;
 export const Container = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  width: 400px;
+  width: 580px;
   background-color: #fff;
   height: 100vh;
   transform: translateX(${(props) => props.transform}%);
@@ -18,6 +22,8 @@ export const Container = styled.div`
 export const CartHeader = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 2rem 2.5rem 1rem 2.5rem;
+  border-bottom: 2px solid #f6f7fb;
 `;
 export const Title = styled.h2`
   font-size: 1.5rem;
