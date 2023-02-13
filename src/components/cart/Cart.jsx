@@ -1,6 +1,7 @@
 import React from "react";
 import HighlightOffOutlinedIcon from "@mui/icons-material/HighlightOffOutlined";
-import { Container, CartHeader, Title, Product } from "../cart/CartStyles";
+import { Container, CartHeader, Title, CartBody } from "../cart/CartStyles";
+import CartItem from "../carttitem/CartItem";
 const Cart = ({ rightMenu, closeSidebar }) => {
   return (
     <Container transform={rightMenu ? 0 : 100}>
@@ -10,7 +11,9 @@ const Cart = ({ rightMenu, closeSidebar }) => {
           <HighlightOffOutlinedIcon />
         </div>
       </CartHeader>
-      <Product></Product>
+      <CartBody>
+        <CartItem />
+      </CartBody>
     </Container>
   );
 };
