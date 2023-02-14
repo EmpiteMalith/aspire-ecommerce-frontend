@@ -22,6 +22,10 @@ body {
 
 }
 
+a{
+  text-decoration: none;
+}
+
 /* Slider */
 .swiper-pagination-bullet {
   width: 20px !important;
@@ -58,4 +62,6 @@ body {
 }
 
 /************************/
+
+
 
