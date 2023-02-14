@@ -40,3 +40,22 @@ body {
   min-height:calc(100vh - 287.59px);
 }
 
+/**********Custom ScrollBar*************/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 30px;
+}
+
+/************************/
+
