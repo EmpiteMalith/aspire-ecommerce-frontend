@@ -16,6 +16,7 @@ import RightSidebar from "../container/RightSidebar";
 import { createGlobalStyle } from "styled-components";
 import Cart from "../cart/Cart";
 import WishList from "../wishlist/WishList";
+import { Link } from "react-router-dom";
 
 export const Globalstyle = createGlobalStyle`
   body{
@@ -58,7 +59,7 @@ const Navbar = () => {
       <Container stickyNav={navbar}>
         <Wrapper>
           <Left>
-            <Logo>ASPIRE</Logo>
+           <Link to="/"><Logo>ASPIRE</Logo></Link> 
           </Left>
           <Right>
             <MenuItem>Register</MenuItem>
