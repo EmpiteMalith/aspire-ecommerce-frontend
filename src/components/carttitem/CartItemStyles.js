@@ -1,10 +1,16 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   height: calc(100vh - 220px);
+  padding: 0 1rem;
 `;
 
 export const Item = styled.div`
@@ -93,5 +99,42 @@ export const RemoveItem = styled.div`
   &:hover {
     background: #ff497c;
     color: #fff;
+  }
+`;
+
+export const CartBottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+`;
+export const TotalAmount = styled.div`
+ display: flex;
+`;
+
+export const TotalText = styled.span`
+  font-size: 1.2rem;
+`;
+
+export const TotalPrice = styled.span`
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+`;
+
+export const CheckoutButton = styled.button`
+  font-size: 1rem;
+  background: #007aff;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+  &:hover {
+    opacity: 0.75;
   }
 `;
