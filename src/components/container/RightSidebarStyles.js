@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SidebarBody = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2rem 2.5rem;
+  padding: 2rem 1rem;
 `;
 export const Container = styled.div`
   position: fixed;
