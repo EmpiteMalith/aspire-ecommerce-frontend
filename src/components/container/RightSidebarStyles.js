@@ -22,10 +22,26 @@ export const Container = styled.div`
 export const SidebarHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 2rem 2.5rem 1rem 2.5rem;
+  align-items: center;
+  padding: 1.5rem 2.5rem 1rem 2.5rem;
   border-bottom: 2px solid #f6f7fb;
 `;
 export const Title = styled.h2`
   font-size: 1.5rem;
   font-weight: 500;
 `;
+
+export const CloseBtutton = styled.div`
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #f6f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background: #ff497c;
+    color: #fff;
+  }
+`
