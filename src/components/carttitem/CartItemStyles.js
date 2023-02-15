@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  height: calc(100vh - 220px);
 `;
 
 export const Item = styled.div`
