@@ -24,7 +24,6 @@ const Home = () => {
         <Title>Featured Products</Title>
         <Products />
       </Section>
-
       <Services />
     </>
   );
