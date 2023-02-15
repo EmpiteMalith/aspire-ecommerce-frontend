@@ -63,5 +63,9 @@ a{
 
 /************************/
 
+.cart-item-container::-webkit-scrollbar {
+  width: 0px;
+}
+
 
 
