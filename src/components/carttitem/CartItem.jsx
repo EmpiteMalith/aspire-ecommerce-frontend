@@ -18,171 +18,66 @@ import {
   TotalText,
   TotalPrice,
   CheckoutButton,
+  AddCartButton,
+  WishlistContent,
+  InStock,
+  OutStock,
 } from "../carttitem/CartItemStyles";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import CloseIcon from "@mui/icons-material/Close";
+import { ProductsData } from "../../data/productsData";
 
-const CartItem = () => {
+const CartItem = (props) => {
   return (
     <Container>
-      <ItemContainer className="cart-item-container">
-        <Item>
-          <ImageContainer>
-            <RemoveItem>
-              <CloseIcon sx={{ fontSize: 14 }} />
-            </RemoveItem>
-            <Image
-              src="https://m.media-amazon.com/images/I/61GJQyjIIhL._AC_UY218_.jpg"
-              alt="item"
-            />
-          </ImageContainer>
-          <ItemDetails>
-            <ItemName>BINNUNE Wireless Gaming Headset</ItemName>
-            <ItemPrice>$ 39.99</ItemPrice>
-          </ItemDetails>
-          <ItemPriceContainer>
-            <QtyInc>
-              <AddIcon sx={{ fontSize: 20 }} />
-            </QtyInc>
-            <ItemQuantity>5</ItemQuantity>
-            <QtyDec>
-              <RemoveIcon sx={{ fontSize: 20 }} />
-            </QtyDec>
-          </ItemPriceContainer>
-        </Item>
-        <Item>
-          <ImageContainer>
-            <RemoveItem>
-              <CloseIcon sx={{ fontSize: 14 }} />
-            </RemoveItem>
-            <Image
-              src="https://m.media-amazon.com/images/I/61IG46p-yHL._AC_UY218_.jpg"
-              alt="item"
-            />
-          </ImageContainer>
-          <ItemDetails>
-            <ItemName>
-              DualShock 4 Wireless Controller for PlayStation 4 - Jet Black
-            </ItemName>
-            <ItemPrice>$ 58.85</ItemPrice>
-          </ItemDetails>
-          <ItemPriceContainer>
-            <QtyInc>
-              <AddIcon sx={{ fontSize: 20 }} />
-            </QtyInc>
-            <ItemQuantity>15</ItemQuantity>
-            <QtyDec>
-              <RemoveIcon sx={{ fontSize: 20 }} />
-            </QtyDec>
-          </ItemPriceContainer>
-        </Item>
-        <Item>
-          <ImageContainer>
-            <RemoveItem>
-              <CloseIcon sx={{ fontSize: 14 }} />
-            </RemoveItem>
-            <Image
-              src="https://m.media-amazon.com/images/I/81xKdwCO2hL._AC_UL320_.jpg"
-              alt="item"
-            />
-          </ImageContainer>
-          <ItemDetails>
-            <ItemName>HP Victus 15 Gaming Laptop</ItemName>
-            <ItemPrice>$ 688.88</ItemPrice>
-          </ItemDetails>
-          <ItemPriceContainer>
-            <QtyInc>
-              <AddIcon sx={{ fontSize: 20 }} />
-            </QtyInc>
-            <ItemQuantity>4</ItemQuantity>
-            <QtyDec>
-              <RemoveIcon sx={{ fontSize: 20 }} />
-            </QtyDec>
-          </ItemPriceContainer>
-        </Item>
-        <Item>
-          <ImageContainer>
-            <RemoveItem>
-              <CloseIcon sx={{ fontSize: 14 }} />
-            </RemoveItem>
-            <Image
-              src="https://m.media-amazon.com/images/I/61GJQyjIIhL._AC_UY218_.jpg"
-              alt="item"
-            />
-          </ImageContainer>
-          <ItemDetails>
-            <ItemName>BINNUNE Wireless Gaming Headset</ItemName>
-            <ItemPrice>$ 39.99</ItemPrice>
-          </ItemDetails>
-          <ItemPriceContainer>
-            <QtyInc>
-              <AddIcon sx={{ fontSize: 20 }} />
-            </QtyInc>
-            <ItemQuantity>5</ItemQuantity>
-            <QtyDec>
-              <RemoveIcon sx={{ fontSize: 20 }} />
-            </QtyDec>
-          </ItemPriceContainer>
-        </Item>
-        <Item>
-          <ImageContainer>
-            <RemoveItem>
-              <CloseIcon sx={{ fontSize: 14 }} />
-            </RemoveItem>
-            <Image
-              src="https://m.media-amazon.com/images/I/61IG46p-yHL._AC_UY218_.jpg"
-              alt="item"
-            />
-          </ImageContainer>
-          <ItemDetails>
-            <ItemName>
-              DualShock 4 Wireless Controller for PlayStation 4 - Jet Black
-            </ItemName>
-            <ItemPrice>$ 58.85</ItemPrice>
-          </ItemDetails>
-          <ItemPriceContainer>
-            <QtyInc>
-              <AddIcon sx={{ fontSize: 20 }} />
-            </QtyInc>
-            <ItemQuantity>15</ItemQuantity>
-            <QtyDec>
-              <RemoveIcon sx={{ fontSize: 20 }} />
-            </QtyDec>
-          </ItemPriceContainer>
-        </Item>
-        <Item>
-          <ImageContainer>
-            <RemoveItem>
-              <CloseIcon sx={{ fontSize: 14 }} />
-            </RemoveItem>
-            <Image
-              src="https://m.media-amazon.com/images/I/81xKdwCO2hL._AC_UL320_.jpg"
-              alt="item"
-            />
-          </ImageContainer>
-          <ItemDetails>
-            <ItemName>HP Victus 15 Gaming Laptop</ItemName>
-            <ItemPrice>$ 688.88</ItemPrice>
-          </ItemDetails>
-          <ItemPriceContainer>
-            <QtyInc>
-              <AddIcon sx={{ fontSize: 20 }} />
-            </QtyInc>
-            <ItemQuantity>4</ItemQuantity>
-            <QtyDec>
-              <RemoveIcon sx={{ fontSize: 20 }} />
-            </QtyDec>
-          </ItemPriceContainer>
-        </Item>
+      <ItemContainer className="cart-item-container" containerType={props.itemType}>
+        {ProductsData.map((item) => (
+          <Item key={item.id}>
+            <ImageContainer>
+              <RemoveItem>
+                <CloseIcon sx={{ fontSize: 14 }} />
+              </RemoveItem>
+              <Image src={item.image} alt="item" />
+            </ImageContainer>
+            <ItemDetails>
+              <ItemName>{item.title}</ItemName>
+              <ItemPrice>{item.price}</ItemPrice>
+            </ItemDetails>
+            {props.itemType === "cart" ? (
+              <ItemPriceContainer>
+                <QtyInc>
+                  <AddIcon sx={{ fontSize: 20 }} />
+                </QtyInc>
+                <ItemQuantity>5</ItemQuantity>
+                <QtyDec>
+                  <RemoveIcon sx={{ fontSize: 20 }} />
+                </QtyDec>
+              </ItemPriceContainer>
+            ) : (
+              <>
+                <WishlistContent>
+                  <AddCartButton itemQty={item.qty}>Add to Cart</AddCartButton>
+                  {item.qty === 0 ? (
+                    <OutStock>Out of Stock</OutStock>
+                  ) : (
+                    <InStock>In Stock</InStock>
+                  )}
+                </WishlistContent>
+              </>
+            )}
+          </Item>
+        ))}
       </ItemContainer>
-      <CartBottom>
-        <TotalAmount>
-          <TotalText>Total</TotalText>
-          <TotalPrice>$567</TotalPrice>
-        </TotalAmount>
-        <CheckoutButton>Checkout</CheckoutButton>
-      </CartBottom>
+      {props.itemType === "cart" ? (
+        <CartBottom>
+          <TotalAmount>
+            <TotalText>Total</TotalText>
+            <TotalPrice>$567</TotalPrice>
+          </TotalAmount>
+          <CheckoutButton>Checkout</CheckoutButton>
+        </CartBottom>
+      ) : null}
     </Container>
   );
 };
