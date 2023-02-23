@@ -9,7 +9,9 @@ export const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: calc(100vh - 220px);
+  height: calc(
+    100vh - ${(props) => (props.containerType === "cart" ? 220 : 150)}px
+  );
   padding: 0 1rem;
 `;
 
@@ -38,6 +40,7 @@ export const ItemDetails = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 1rem;
+  flex: 1;
 `;
 
 export const ItemPriceContainer = styled.div`
@@ -111,7 +114,7 @@ export const CartBottom = styled.div`
   padding: 1rem;
 `;
 export const TotalAmount = styled.div`
- display: flex;
+  display: flex;
 `;
 
 export const TotalText = styled.span`
@@ -137,4 +140,31 @@ export const CheckoutButton = styled.button`
   &:hover {
     opacity: 0.75;
   }
+`;
+
+export const AddCartButton = styled(CheckoutButton)`
+  font-size: 14px;
+  width: 120px;
+  pointer-events: ${(props) => (props.itemQty === 0 ? "none" : "auto")};
+  opacity: ${(props) => (props.itemQty === 0 ? 0.7 : 1)};
+`;
+export const StockStatus = styled.span`
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-top: 0.4rem;
+`;
+
+export const InStock = styled(StockStatus)`
+  color: #76bd1c;
+`;
+
+export const OutStock = styled(StockStatus)`
+  color: #e34848;
+`;
+
+export const WishlistContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

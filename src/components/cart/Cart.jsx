@@ -5,7 +5,7 @@ import CartItem from "../carttitem/CartItem";
 const Cart = () => {
   return (
     <CartContent>
-      <CartItem />
+      <CartItem itemType="cart"/>
     </CartContent>
   );
 };

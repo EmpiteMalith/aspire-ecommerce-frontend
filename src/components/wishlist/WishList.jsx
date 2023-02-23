@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { CartContent } from "../cart/CartStyles";
+import CartItem from "../carttitem/CartItem";
 
 const WishList = () => {
   return (
-    <div>WishList</div>
-  )
-}
+    <CartContent>
+      <CartItem itemType="wishlist" />
+    </CartContent>
+  );
+};
 
-export default WishList
+export default WishList;
