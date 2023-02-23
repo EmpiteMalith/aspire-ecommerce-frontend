@@ -4,7 +4,7 @@ export const ProductsData = [
     image: "https://m.media-amazon.com/images/I/81xKdwCO2hL._AC_UL320_.jpg",
     price: 688.88,
     title: "HP Victus 15 Gaming Laptop",
-    qty:10
+    qty:5
   },
   {
     id: 2,
