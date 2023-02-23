@@ -31,7 +31,10 @@ import { ProductsData } from "../../data/productsData";
 const CartItem = (props) => {
   return (
     <Container>
-      <ItemContainer className="cart-item-container" containerType={props.itemType}>
+      <ItemContainer
+        className="cart-item-container"
+        containerType={props.itemType}
+      >
         {ProductsData.map((item) => (
           <Item key={item.id}>
             <ImageContainer>
@@ -42,7 +45,7 @@ const CartItem = (props) => {
             </ImageContainer>
             <ItemDetails>
               <ItemName>{item.title}</ItemName>
-              <ItemPrice>{item.price}</ItemPrice>
+              <ItemPrice>${item.price}</ItemPrice>
             </ItemDetails>
             {props.itemType === "cart" ? (
               <ItemPriceContainer>
@@ -61,7 +64,10 @@ const CartItem = (props) => {
                   {item.qty === 0 ? (
                     <OutStock>Out of Stock</OutStock>
                   ) : (
-                    <InStock>In Stock</InStock>
+                    <>
+                      <InStock>In Stock</InStock>
+                      {item.qty < 10 ? <span>Only {item.qty} left !</span> : null}
+                    </>
                   )}
                 </WishlistContent>
               </>
