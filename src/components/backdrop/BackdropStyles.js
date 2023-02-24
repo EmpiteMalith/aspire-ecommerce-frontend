@@ -10,5 +10,4 @@ export const Container = styled.div`
   overflow: hidden;
   display: ${(props) => props.backdrop};
   z-index: 2;
-  color: transparent;
 `;
