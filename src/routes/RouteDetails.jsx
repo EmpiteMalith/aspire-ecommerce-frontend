@@ -5,6 +5,7 @@ import ProductDetails from "../pages/productDetails";
 import LoginPage from "../pages/login";
 import RegisterPage from "../pages/register";
 import ProductCategory from "../pages/productCategory";
+import CheckoutPage from "../pages/productsCheckout";
 
 const RouteDetails = () => {
   return (
@@ -14,6 +15,7 @@ const RouteDetails = () => {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/productCategory" element={<ProductCategory/>} />
       <Route path="/productDetails/:id" element={<ProductDetails />} />
+      <Route path="/checkout" element={<CheckoutPage/>} />
     </Routes>
   );
 };

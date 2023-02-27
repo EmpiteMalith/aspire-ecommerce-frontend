@@ -47,7 +47,7 @@ const CartItem = (props) => {
               <ItemName>{item.title}</ItemName>
               <ItemPrice>${item.price}</ItemPrice>
             </ItemDetails>
-            {props.itemType === "cart" ? (
+            {props.itemType === "cart" || props.pageType === "checkout" ? (
               <ItemPriceContainer>
                 <QtyInc>
                   <AddIcon sx={{ fontSize: 20 }} />
@@ -66,7 +66,9 @@ const CartItem = (props) => {
                   ) : (
                     <>
                       <InStock>In Stock</InStock>
-                      {item.qty < 10 ? <span>Only {item.qty} left !</span> : null}
+                      {item.qty < 10 ? (
+                        <span>Only {item.qty} left !</span>
+                      ) : null}
                     </>
                   )}
                 </WishlistContent>
@@ -83,7 +85,7 @@ const CartItem = (props) => {
           </TotalAmount>
           <CheckoutButton>Checkout</CheckoutButton>
         </CartBottom>
-      ) : null}
+      ) : props.pageType === "checkout" ? null : null}
     </Container>
   );
 };
